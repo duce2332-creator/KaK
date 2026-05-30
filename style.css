@@ -1,0 +1,352 @@
+/* ========================================= */
+/* --- TÉMATICKÉ PROMĚNNÉ --- */
+/* ========================================= */
+:root {
+    --color-parchment-light: #f4e9d5;
+    --color-parchment-main: #e6d7bc;
+    --color-parchment-dark: #c4af83;
+    --color-crimson: #8c1c1c;      
+    --color-wood: #3d2b1f;         
+    --color-gold: #b08d46;
+    
+    --font-heading: 'Cinzel', serif;
+    --font-text: 'Alegreya', serif;
+    --font-subheading: 'Alegreya SC', serif;
+}
+
+/* ========================================= */
+/* --- CELKOVÝ STYL --- */
+/* ========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-wood);
+    background-image: 
+        linear-gradient(rgba(61, 43, 31, 0.8), rgba(61, 43, 31, 0.8)),
+        url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    color: var(--color-wood);
+    font-family: var(--font-text);
+    font-size: 1.25rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-gold);
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 80px; 
+}
+
+/* ========================================= */
+/* --- ZÁHLAVÍ --- */
+/* ========================================= */
+.hero-header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
+        url('iterier.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    border-bottom: 5px double var(--color-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.logo-frame {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px;
+}
+
+.main-logo {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.7));
+    transition: transform 0.5s ease;
+}
+
+.main-logo:hover {
+    transform: scale(1.02);
+}
+
+.header-subtitle {
+    font-family: var(--font-subheading);
+    color: var(--color-parchment-light);
+    font-weight: 700;
+    margin-top: 25px;
+    letter-spacing: 1.5px;
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+/* ========================================= */
+/* --- NAVIGACE --- */
+/* ========================================= */
+.medieval-nav {
+    background-color: var(--color-crimson);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--color-gold);
+}
+
+.medieval-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.medieval-nav a {
+    color: var(--color-parchment-light);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    padding: 15px 25px;
+    display: block;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.medieval-nav a:hover {
+    color: var(--color-gold);
+}
+
+/* ========================================= */
+/* --- KONTEJNER OBSAHU & PERGAMEN --- */
+/* ========================================= */
+.main-content {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.parchment-card {
+    background-color: var(--color-parchment-main);
+    background-image: url('https://www.transparenttextures.com/patterns/p6.png');
+    padding: 50px;
+    border-radius: 2px;
+    border: 1px solid var(--color-parchment-dark);
+    box-shadow: 
+        5px 5px 20px rgba(0,0,0,0.4),
+        inset 0 0 50px rgba(130, 100, 60, 0.2);
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.parchment-card::before { 
+    content: '';
+    position: absolute;
+    top: 10px; left: 10px; right: 10px; bottom: 10px;
+    border: 1px solid rgba(130, 100, 60, 0.15);
+    pointer-events: none;
+}
+
+.ornate-title {
+    font-family: var(--font-heading);
+    color: var(--color-crimson);
+    text-align: center;
+    font-size: 2.4rem;
+    margin-top: 0;
+    border-bottom: 2px double var(--color-gold);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.drop-cap::first-letter {
+    font-family: var(--font-heading);
+    float: left;
+    font-size: 4rem;
+    line-height: 1;
+    padding-right: 10px;
+    color: var(--color-crimson);
+    font-weight: 900;
+}
+
+/* ========================================= */
+/* --- HERNÍ SEKCE --- */
+/* ========================================= */
+.section-heading {
+    color: var(--color-parchment-light);
+    font-family: var(--font-heading);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.game-item {
+    flex: 1;
+    min-width: 280px;
+    min-height: 420px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--color-gold);
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    
+    /* Změněno pro vysouvací efekt */
+    display: flex;
+    align-items: flex-end; 
+    overflow: hidden; 
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+}
+
+.game-content {
+    background-color: rgba(140, 28, 28, 0.95);
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 2px solid var(--color-gold);
+    width: 100%;
+    box-sizing: border-box;
+    
+    /* Vysouvací mechanika */
+    transform: translateY(calc(100% - 120px)); /* Schová text, nechá koukat nadpis. Uprav číslo, pokud by nadpis moc zalezl. */
+    transition: transform 0.4s ease-in-out;
+}
+
+.game-content h3 {
+    font-family: var(--font-heading);
+    color: var(--color-parchment-light);
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+    border: none;
+}
+
+.game-content p {
+    color: var(--color-parchment-light);
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    
+    /* Průhlednost popisku */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* KDYŽ MYŠ NAJEDE NA KARTU (HOVER EFEKT OBSAHU) */
+.game-item:hover .game-content {
+    transform: translateY(0); /* Vyhrne se nahoru */
+}
+
+.game-item:hover .game-content p {
+    opacity: 1; /* Popisek se zviditelní */
+    transition-delay: 0.1s; /* Drobné zpoždění pro plynulejší pocit */
+}
+
+/* ========================================= */
+/* --- ÚPRAVA PRO JEDNOSLOUPCOVÉ MENU --- */
+/* ========================================= */
+.menu-flex {
+    display: flex;
+    justify-content: center;
+    max-width: 480px;        
+    margin: 0 auto;   
+}
+
+.menu-col {
+    flex: 1;
+}
+
+.menu-col h3 {
+    font-family: var(--font-subheading);
+    color: var(--color-crimson);
+    border-bottom: 2px solid var(--color-gold);
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    text-align: center; 
+    font-size: 1.6rem;
+}
+
+.menu-col p {
+    margin: 24px 0;   
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted rgba(61, 43, 31, 0.3);
+    padding-bottom: 6px;
+}
+
+/* ========================================= */
+/* --- PATIČKA --- */
+/* ========================================= */
+.medieval-footer {
+    background-color: var(--color-parchment-dark);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 5px solid var(--color-crimson);
+    margin-top: 100px;
+}
+
+.footer-logo-frame {
+    max-width: 280px;
+    margin: 0 auto 20px auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(140, 28, 28, 0.3);
+}
+
+.footer-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer-text {
+    font-style: italic;
+    color: var(--color-wood);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+/* ========================================= */
+/* --- MOBILNÍ ÚPRAVY --- */
+/* ========================================= */
+@media (max-width: 768px) {
+    .parchment-card { padding: 25px; }
+    .medieval-nav a { padding: 10px 15px; font-size: 0.9rem; }
+    .ornate-title { font-size: 1.8rem; }
+    .menu-flex { max-width: 100%; }
+    
+    /* Na mobilu možná budeš chtít mít text vytažený pořád, 
+       protože hover na dotykových displejích nefunguje. 
+       Pokud bys to tak chtěl, stačí odkomentovat tyto řádky: */
+    
+    /*
+    .game-content { transform: translateY(0); }
+    .game-content p { opacity: 1; }
+    */
+}
