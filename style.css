@@ -136,6 +136,13 @@ section[id] {
     padding: 0 20px;
 }
 
+.gothic-paragraph {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+}
+
 .parchment-card {
     background-color: var(--color-parchment-main);
     background-image: url('https://www.transparenttextures.com/patterns/p6.png');
