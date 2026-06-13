@@ -6,7 +6,7 @@
     --color-parchment-light: #f4e9d5;
     --color-parchment-main: #e6d7bc;
     --color-parchment-dark: #c4af83;
-    --color-crimson: #9d1b2f;      
+    --color-crimson: #861626;      
     --color-wood: #3d2b1f;         
     --color-gold: #b08d46;
     
@@ -220,7 +220,7 @@ section[id] {
 }
 
 .game-content {
-    background-color: rgba(157, 27, 47, 0.95);
+    background-color: rgba(134, 22, 38, 0.95);
     padding: 25px 20px;
     text-align: center;
     border-top: 2px solid var(--color-gold);
@@ -309,7 +309,7 @@ section[id] {
     max-width: 280px;
     margin: 0 auto 20px auto;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba(157, 27, 47, 0.3);
+    border-bottom: 1px solid rgba(134, 22, 38, 0.3);
 }
 
 .footer-logo {
