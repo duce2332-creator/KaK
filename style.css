@@ -204,12 +204,9 @@ section[id] {
     background-position: center;
 }
 
-.game-item.featured-boardgames .game-content {
-    transform: translateY(calc(100% - 140px));
-}
-
+/* Featured karta je velikostí odlišná, ale chováním stejná jako ostatní */
 .game-item.featured-boardgames .game-content h3 {
-    font-size: 2rem;
+    font-size: 1.9rem;
 }
 
 .game-item {
@@ -358,7 +355,6 @@ section[id] {
     .ornate-title { font-size: 1.8rem; }
     .menu-flex { max-width: 100%; }
     .game-item.featured-boardgames { min-height: 460px; }
-    .game-item.featured-boardgames .game-content { transform: translateY(calc(100% - 128px)); }
     
     /* Na mobilu možná budeš chtít mít text vytažený pořád, 
        protože hover na dotykových displejích nefunguje. 
