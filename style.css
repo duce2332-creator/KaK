@@ -196,6 +196,22 @@ section[id] {
     margin-bottom: 60px;
 }
 
+.game-item.featured-boardgames {
+    flex: 1 1 100%;
+    min-height: 540px;
+    border-width: 3px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.7);
+    background-position: center;
+}
+
+.game-item.featured-boardgames .game-content {
+    transform: translateY(calc(100% - 140px));
+}
+
+.game-item.featured-boardgames .game-content h3 {
+    font-size: 2rem;
+}
+
 .game-item {
     flex: 1;
     min-width: 280px;
@@ -341,6 +357,8 @@ section[id] {
     .medieval-nav a { padding: 10px 15px; font-size: 0.9rem; }
     .ornate-title { font-size: 1.8rem; }
     .menu-flex { max-width: 100%; }
+    .game-item.featured-boardgames { min-height: 460px; }
+    .game-item.featured-boardgames .game-content { transform: translateY(calc(100% - 128px)); }
     
     /* Na mobilu možná budeš chtít mít text vytažený pořád, 
        protože hover na dotykových displejích nefunguje. 
