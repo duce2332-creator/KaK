@@ -1,367 +1,137 @@
-/* ========================================= */
-/* --- TÉMATICKÉ PROMĚNNÉ --- */
-/* ========================================= */
-/* Pipeline test: no visual change */
 :root {
-    --color-parchment-light: #f4e9d5;
-    --color-parchment-main: #e6d7bc;
-    --color-parchment-dark: #c4af83;
-    --color-crimson: #741220;      
-    --color-wood: #3d2b1f;         
-    --color-gold: #b08d46;
-    
-    --font-heading: 'Cinzel', serif;
-    --font-text: 'Alegreya', serif;
-    --font-subheading: 'Alegreya SC', serif;
+    --wood: #3d2b1f;
+    --paper: #e6d7bc;
+    --paper-light: #f4e9d5;
+    --crimson: #741220;
+    --gold: #b08d46;
+    --ink: #3d2b1f;
+    --heading: 'Cinzel', Georgia, serif;
+    --text: 'Alegreya', Georgia, serif;
 }
 
-/* ========================================= */
-/* --- CELKOVÝ STYL --- */
-/* ========================================= */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
     margin: 0;
-    padding: 0;
-    background-color: var(--color-wood);
-    background-image: 
-        linear-gradient(rgba(61, 43, 31, 0.8), rgba(61, 43, 31, 0.8)),
+    color: var(--ink);
+    background-color: var(--wood);
+    background-image:
+        linear-gradient(rgba(61, 43, 31, .8), rgba(61, 43, 31, .8)),
         url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    color: var(--color-wood);
-    font-family: var(--font-text);
-    font-size: 1.25rem;
+    font: 1.25rem/1.55 var(--text);
 }
 
-h1, h2, h3 {
-    font-family: var(--font-heading);
-    color: var(--color-gold);
+.site-header {
+    padding: 5rem 1.25rem 4.5rem;
+    color: var(--paper-light);
     text-align: center;
-    letter-spacing: 1px;
-    font-weight: 700;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-section[id] {
-    scroll-margin-top: 80px; 
-}
-
-/* ========================================= */
-/* --- ZÁHLAVÍ --- */
-/* ========================================= */
-.hero-header {
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
-        url('iterier.png'); 
-    background-size: cover;
+    background-color: var(--wood);
+    background-image:
+        linear-gradient(rgba(244, 233, 213, .16), rgba(61, 43, 31, .34)),
+        url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    background-size: auto, auto;
     background-position: center;
-    padding: 80px 20px;
-    border-bottom: 5px double var(--color-gold);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    text-align: center;
+    border-bottom: 5px double var(--gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
 }
-
-.logo-frame {
-    max-width: 400px;
-    margin: 0 auto;
-    position: relative;
-    padding: 10px;
-}
-
-.main-logo {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.7));
-    transition: transform 0.5s ease;
-}
-
-.main-logo:hover {
-    transform: scale(1.02);
-}
-
-.header-subtitle {
-    font-family: var(--font-subheading);
-    color: var(--color-parchment-light);
-    font-weight: 700;
-    margin-top: 25px;
-    letter-spacing: 1.5px;
-    font-size: 1.15rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-}
-
-/* ========================================= */
-/* --- NAVIGACE --- */
-/* ========================================= */
-.medieval-nav {
-    background-color: var(--color-crimson);
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 2px solid var(--color-gold);
-}
-
-.medieval-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
-}
-
-.medieval-nav a {
-    color: var(--color-parchment-light);
-    text-decoration: none;
-    font-family: var(--font-heading);
-    padding: 15px 25px;
-    display: block;
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
-
-.medieval-nav a:hover {
-    color: var(--color-gold);
-}
-
-/* ========================================= */
-/* --- KONTEJNER OBSAHU & PERGAMEN --- */
-/* ========================================= */
-.main-content {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-.parchment-card {
-    background-color: var(--color-parchment-main);
-    background-image: url('https://www.transparenttextures.com/patterns/p6.png');
-    padding: 50px;
-    border-radius: 2px;
-    border: 1px solid var(--color-parchment-dark);
-    box-shadow: 
-        5px 5px 20px rgba(0,0,0,0.4),
-        inset 0 0 50px rgba(130, 100, 60, 0.2);
-    margin-bottom: 60px;
-    position: relative;
-}
-
-.parchment-card::before { 
-    content: '';
-    position: absolute;
-    top: 10px; left: 10px; right: 10px; bottom: 10px;
-    border: 1px solid rgba(130, 100, 60, 0.15);
-    pointer-events: none;
-}
-
-.ornate-title {
-    font-family: var(--font-heading);
-    color: var(--color-crimson);
-    text-align: center;
-    font-size: 2.4rem;
-    margin-top: 0;
-    border-bottom: 2px double var(--color-gold);
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-}
-
-.drop-cap::first-letter {
-    font-family: var(--font-heading);
-    float: left;
-    font-size: 4rem;
-    line-height: 1;
-    padding-right: 10px;
-    color: var(--color-crimson);
-    font-weight: 900;
-}
-
-/* ========================================= */
-/* --- HERNÍ SEKCE --- */
-/* ========================================= */
-.section-heading {
-    color: var(--color-parchment-light);
-    font-family: var(--font-heading);
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-}
-
-.grid-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 60px;
-}
-
-.game-item.featured-boardgames {
-    flex: 1 1 100%;
-    min-height: 540px;
-    border-width: 3px;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.7);
-    background-position: center;
-}
-
-/* Featured karta je velikostí odlišná, ale chováním stejná jako ostatní */
-.game-item.featured-boardgames .game-content h3 {
-    font-size: 1.9rem;
-}
-
-.game-item {
-    flex: 1;
-    min-width: 280px;
-    min-height: 420px;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid var(--color-gold);
-    border-radius: 6px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    
-    /* Změněno pro vysouvací efekt */
-    display: flex;
-    align-items: flex-end; 
-    overflow: hidden; 
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.game-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.8);
-}
-
-.game-content {
-    background-color: rgba(116, 18, 32, 0.95);
-    padding: 25px 20px;
-    text-align: center;
-    border-top: 2px solid var(--color-gold);
-    width: 100%;
-    box-sizing: border-box;
-    
-    /* Vysouvací mechanika */
-    transform: translateY(calc(100% - 120px)); /* Schová text, nechá koukat nadpis. Uprav číslo, pokud by nadpis moc zalezl. */
-    transition: transform 0.4s ease-in-out;
-}
-
-.game-content h3 {
-    font-family: var(--font-heading);
-    color: var(--color-parchment-light);
-    margin: 0 0 10px 0;
-    font-size: 1.6rem;
-    border: none;
-}
-
-.game-content p {
-    color: var(--color-parchment-light);
-    margin: 0;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    
-    /* Průhlednost popisku */
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
-
-/* KDYŽ MYŠ NAJEDE NA KARTU (HOVER EFEKT OBSAHU) */
-.game-item:hover .game-content {
-    transform: translateY(0); /* Vyhrne se nahoru */
-}
-
-.game-item:hover .game-content p {
-    opacity: 1; /* Popisek se zviditelní */
-    transition-delay: 0.1s; /* Drobné zpoždění pro plynulejší pocit */
-}
-
-/* ========================================= */
-/* --- ÚPRAVA PRO JEDNOSLOUPCOVÉ MENU --- */
-/* ========================================= */
-.menu-flex {
-    display: flex;
-    justify-content: center;
-    max-width: 480px;        
-    margin: 0 auto;   
-}
-
-.menu-col {
-    flex: 1;
-}
-
-.menu-col h3 {
-    font-family: var(--font-subheading);
-    color: var(--color-crimson);
-    border-bottom: 2px solid var(--color-gold);
-    padding-bottom: 8px;
-    margin-bottom: 25px;
-    text-align: center; 
-    font-size: 1.6rem;
-}
-
-.menu-col p {
-    margin: 24px 0;   
-    font-size: 1.25rem;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px dotted rgba(61, 43, 31, 0.3);
-    padding-bottom: 6px;
-}
-
-/* ========================================= */
-/* --- PATIČKA --- */
-/* ========================================= */
-.medieval-footer {
-    background-color: var(--color-parchment-light);
-    padding: 40px 20px;
-    text-align: center;
-    border-top: 5px solid var(--color-crimson);
-    margin-top: 100px;
-}
-
-.footer-logo-frame {
-    max-width: 280px;
-    margin: 0 auto 20px auto;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(116, 18, 32, 0.3);
-}
-
-.footer-logo {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.footer-text {
-    font-style: italic;
-    color: var(--color-wood);
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
-
-.copyright {
-    margin-top: 25px;
-    font-size: 0.85rem;
+.logo-frame { width: min(400px, 80vw); margin: 0 auto; padding: 10px; }
+.main-logo, .footer-logo { display: block; width: 100%; height: auto; }
+.main-logo { filter: drop-shadow(0 4px 5px rgba(0,0,0,.72)); }
+.header-subtitle, .section-label {
+    margin: 0 0 .5rem;
+    color: var(--gold);
+    font: 700 1.15rem/1.3 'Alegreya SC', var(--text);
+    letter-spacing: .12em;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.7;
+}
+h1, h2 { font-family: var(--heading); line-height: 1.15; }
+h2 { margin: 0 0 1rem; color: var(--crimson); font-size: clamp(1.7rem, 4vw, 2.5rem); }
+.lead { max-width: 650px; margin: 1.5rem auto 1.75rem; font-size: 1.15rem; }
+
+.button {
+    display: inline-block;
+    padding: .8rem 1.25rem;
+    color: var(--paper-light);
+    background: var(--crimson);
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    font: 700 1rem/1.2 var(--heading);
+    text-decoration: none;
+    transition: transform .2s ease, background .2s ease;
+}
+.button:hover, .button:focus-visible { transform: translateY(-2px); background: #95182b; }
+.button-light { background: var(--paper-light); color: var(--crimson); border-color: var(--paper-light); }
+
+.site-nav {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    min-height: 74px;
+    padding: .55rem max(1.25rem, calc((100% - 1100px) / 2));
+    background: var(--crimson);
+    border-bottom: 2px solid var(--gold);
+}
+.nav-links { display: flex; justify-content: center; flex-wrap: nowrap; gap: .1rem .8rem; position: absolute; left: 50%; transform: translateX(-50%); width: max-content; }
+.site-nav a { display: block; padding: .95rem 1.15rem; color: var(--paper-light); font-family: var(--heading); font-size: 1.2rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.site-nav a:hover, .site-nav a:focus-visible { color: var(--gold); }
+.nav-socials { display: flex; align-items: center; gap: .35rem; margin-left: auto; }
+.nav-socials a { padding: .6rem; line-height: 0; }
+.nav-socials svg { width: 1.8rem; height: 1.8rem; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.nav-socials svg path:not(.play) { stroke: currentColor; }
+.nav-socials svg .play { fill: currentColor; stroke: none; }
+
+.main-content { width: min(1100px, calc(100% - 2rem)); margin: 50px auto; }
+.paper-card, .support-card, .future-note { margin-bottom: 60px; padding: 50px; border-radius: 2px; }
+.paper-card, .future-note { background: var(--paper); background-image: url('https://www.transparenttextures.com/patterns/p6.png'); border: 1px solid #c4af83; box-shadow: 5px 5px 20px rgba(0,0,0,.4), inset 0 0 50px rgba(130,100,60,.2); position: relative; }
+.paper-card::before, .future-note::before { content: ''; position: absolute; inset: 10px; border: 1px solid rgba(130,100,60,.15); pointer-events: none; }
+.paper-card p, .future-note p { max-width: 700px; margin: .75rem auto; }
+.paper-card h2, .future-note h2 { text-align: center; }
+.paper-card .section-label, .future-note .section-label { text-align: center; }
+.support-card { display: flex; align-items: center; justify-content: space-between; gap: 2rem; color: var(--paper-light); background: var(--crimson); border: 1px solid var(--gold); box-shadow: 5px 8px 24px rgba(0,0,0,.25); }
+.support-card h2 { color: var(--paper-light); }
+.support-card p { margin-bottom: 0; }
+.support-card > div { flex: 1; }
+
+.hours-card { text-align: center; }
+.notice { font-style: italic; }
+.hours-list { max-width: 540px; margin: 1.5rem auto 0; }
+.hours-list div { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem 0; border-bottom: 1px dotted rgba(52,38,28,.4); }
+.hours-list dt { font-weight: 700; }
+.hours-list dd { margin: 0; }
+
+.social-section { padding: 2.5rem 1rem; color: var(--paper-light); text-align: center; }
+.social-section h2 { color: var(--paper-light); }
+.social-section p { max-width: 650px; margin: 0 auto 1.25rem; }
+.social-links { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; }
+.social-links span { padding: .65rem 1rem; color: var(--paper-light); border: 1px solid var(--gold); border-radius: 999px; font-family: var(--heading); font-size: 1rem; }
+.future-note { text-align: center; }
+.site-footer { padding: 2.5rem 1rem; color: var(--ink); text-align: center; background: var(--paper-light); border-top: 4px solid var(--crimson); }
+.footer-logo { width: min(190px, 55vw); margin: 0 auto 1rem; }
+.site-footer p { margin: 0; font-size: 1rem; }
+
+@media (max-width: 640px) {
+    body { font-size: 1.08rem; }
+    .site-nav { min-height: 0; align-items: flex-start; padding: .35rem .5rem; }
+    .nav-links { position: static; transform: none; gap: 0; }
+    .site-nav a { padding: .7rem .45rem; font-size: .9rem; }
+    .nav-socials { gap: 0; }
+    .nav-socials a { padding: .5rem .25rem; }
+    .nav-socials svg { width: 1.55rem; height: 1.55rem; }
+    .support-card { align-items: stretch; flex-direction: column; gap: 1rem; }
+    .support-card .button { align-self: flex-start; }
+    .hours-list div { font-size: 1rem; }
 }
 
-/* ========================================= */
-/* --- MOBILNÍ ÚPRAVY --- */
-/* ========================================= */
-@media (max-width: 768px) {
-    .parchment-card { padding: 25px; }
-    .medieval-nav a { padding: 10px 15px; font-size: 0.9rem; }
-    .ornate-title { font-size: 1.8rem; }
-    .menu-flex { max-width: 100%; }
-    .game-item.featured-boardgames { min-height: 460px; }
-    
-    /* Na mobilu možná budeš chtít mít text vytažený pořád, 
-       protože hover na dotykových displejích nefunguje. 
-       Pokud bys to tak chtěl, stačí odkomentovat tyto řádky: */
-    
-    /*
-    .game-content { transform: translateY(0); }
-    .game-content p { opacity: 1; }
-    */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: .01ms !important; }
+}
+
+/* This temporary landing page intentionally uses no decorative photos. */
+#site, #o-nas, #startovac, #oteviraci-doba { scroll-margin-top: 5rem; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.hours-list dt, .hours-list dd { overflow-wrap: anywhere; }
+.site-footer .footer-logo { max-height: 120px; object-fit: contain; }
+@media (max-width: 640px) {
+    .main-content { margin-top: 2rem; }
+    .site-nav a { min-height: 2.25rem; }
 }
