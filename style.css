@@ -146,7 +146,8 @@ h2 { margin: 0 0 1rem; color: var(--crimson); font-size: clamp(1.7rem, 4vw, 2.5r
 .social-section h2 { color: var(--paper-light); }
 .social-section p { max-width: 650px; margin: 0 auto 1.25rem; }
 .social-links { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; }
-.social-links span { padding: .65rem 1rem; color: var(--paper-light); border: 1px solid var(--gold); border-radius: 999px; font-family: var(--heading); font-size: 1rem; }
+.social-links span, .social-links a { padding: .65rem 1rem; color: var(--paper-light); border: 1px solid var(--gold); border-radius: 999px; font-family: var(--heading); font-size: 1rem; text-decoration: none; }
+.social-links a:hover, .social-links a:focus-visible { color: var(--gold); }
 .future-note { text-align: center; }
 .site-footer { padding: 2.5rem 1rem; color: var(--ink); text-align: center; background: var(--paper-light); border-top: 4px solid var(--crimson); }
 .footer-logo { width: min(190px, 55vw); margin: 0 auto 1rem; }
