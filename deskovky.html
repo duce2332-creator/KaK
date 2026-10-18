@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Připravujeme seznam dostupných deskových her v herní krčmě Kostky a Korbely.">
+    <meta name="description" content="Abecední přehled deskových her v herní krčmě Kostky a Korbely.">
     <title>Deskové hry | Kostky a Korbely</title>
+    <!-- Společné styly a písma používaná na webu. -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,7 @@
             <a href="aktuality.html">Aktuality</a>
             <a href="index.html#oteviraci-doba">Otevírací doba</a>
         </div>
-
+        <!-- Ikony sociálních profilů. -->
         <div class="nav-socials" aria-label="Sociální sítě">
             <a href="https://www.instagram.com/kostkyakorbely/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
             <a href="https://www.facebook.com/people/Kostky-a-korbely/61594468944132/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8h3.4Z"></path></svg></a>
@@ -37,17 +38,146 @@
         </div>
     </nav>
 
-    <!-- Hlavní obsah podstránky s připravovaným katalogem her. -->
-    <main class="main-content subpage-content">
-        <section class="paper-card placeholder-card" aria-labelledby="games-title">
+    <!-- Hlavní obsah podstránky s katalogem deskových her. -->
+    <main class="main-content subpage-content catalog-page">
+        <!-- Úvod katalogu a vyhledávání v seznamu. -->
+        <header class="paper-card catalog-intro">
             <p class="section-label">Nabídka her</p>
-            <h1 id="games-title">Seznam deskových her</h1>
-            <p>Připravujeme seznam dostupných deskových her. Přehled doplníme, jakmile bude připravený.</p>
-            <a class="button" href="index.html">Zpět na hlavní stránku</a>
+            <h1 id="games-title">Naše deskovky</h1>
+            <p>Abecední přehled her, které najdete v našem seznamu. Rozšíření jsou uvedena u příslušných her.</p>
+            <label class="catalog-search-label" for="game-search">Najít hru</label>
+            <input class="catalog-search" id="game-search" type="search" placeholder="Začněte psát název…" autocomplete="off">
+            <p class="catalog-count" id="game-count" aria-live="polite">V seznamu je 87 herních titulů.</p>
+        </header>
+
+        <!-- Seznam her seřazený podle české abecedy. -->
+        <section class="catalog-section" aria-labelledby="games-title">
+            <ol class="game-catalog" id="game-list">
+                <li class="game-card"><span class="game-index" aria-hidden="true">01</span><span class="game-title">7 divů světa: Duel</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">02</span><span class="game-title">Ahoj!</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">03</span><span class="game-title">Azul</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">04</span><span class="game-title">BANG! Duel</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">05</span><span class="game-title">BANG! Dynamite Box</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">06</span><span class="game-title">BANG! Kostková hra</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">07</span><span class="game-title">BANG! – Old Saloon (rozšíření)</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">08</span><span class="game-title">Books of Time</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">09</span><span class="game-title">Brick Like This!</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">10</span><span class="game-title">Břink: V katakombách</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">11</span><span class="game-title">CATAN: Big Box</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">12</span><span class="game-title">CATAN: Duel</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">13</span><span class="game-title">Cink!</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">14</span><span class="game-title">Cink! Junior</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">15</span><span class="game-title">Cortex Challenge</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">16</span><span class="game-title">Čajová zahrada</span>
+                <span class="expansion-note">Rozšíření: Puerh</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">17</span><span class="game-title">Člověče, nezlob se</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">18</span><span class="game-title">Desítka</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">19</span><span class="game-title">Dixit Odyssey</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">20</span><span class="game-title">Dobble</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">21</span><span class="game-title">Dostihy a sázky</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">22</span><span class="game-title">Dračí hrad</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">23</span><span class="game-title">Ekosystém</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">24</span><span class="game-title">Far Cry: Escape from Rook Islands</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">25</span><span class="game-title">Flip 7</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">26</span><span class="game-title">Founders of Teotihuacan (EN)</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">27</span><span class="game-title">Gloomhaven: Buttons & Bugs</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">28</span><span class="game-title">Gwint</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">29</span><span class="game-title">Herbivoři</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">30</span><span class="game-title">Heroes of Might and Magic III</span>
+                <span class="expansion-note">Rozšíření: Věž, Pevnost, Soutok, Peklo, Zátoka, Tvrz, Bašta, Frakční jednotky, Námořní bitvy, Props and Neutral Units, Bitevní pole, Stretch Goals – Klasické</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">31</span><span class="game-title">Hot Streak</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">32</span><span class="game-title">Jedeme bomby!</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">33</span><span class="game-title">Jízdenky, prosím!</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">34</span><span class="game-title">Karak</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">35</span><span class="game-title">Karak Goblin</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">36</span><span class="game-title">Karak II</span>
+                <span class="expansion-note">Rozšíření: Imperium</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">37</span><span class="game-title">Kouzelné šachy</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">38</span><span class="game-title">Krycí jména: Zpátky do Bradavic</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">39</span><span class="game-title">Lotři</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">40</span><span class="game-title">Mágové: Tajemství relikvie</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">41</span><span class="game-title">Mesos: Klany mezolitu</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">42</span><span class="game-title">Minecraft: Builders & Biomes</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">43</span><span class="game-title">Mistr Makatsu</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">44</span><span class="game-title">Monopoly: Star Wars (The Mandalorian)</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">45</span><span class="game-title">Nakrmte Krakena</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">46</span><span class="game-title">Na křídlech draků</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">47</span><span class="game-title">Nova Era</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">48</span><span class="game-title">Okurkočky</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">49</span><span class="game-title">Pán prstenů: Duel o Středozem</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">50</span><span class="game-title">Pán prstenů: Dvě věže</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">51</span><span class="game-title">Pán prstenů: Společenstvo prstenu</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">52</span><span class="game-title">Pivo a chléb</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">53</span><span class="game-title">Prásk!</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">54</span><span class="game-title">Pyramido</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">55</span><span class="game-title">Rumble in the House</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">56</span><span class="game-title">Scrabble: Karetní hra</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">57</span><span class="game-title">Sky Team: Hladké přistání</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">58</span><span class="game-title">Splendor</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">59</span><span class="game-title">Společenství dobrodruhů</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">60</span><span class="game-title">Střet měst</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">61</span><span class="game-title">Super farmář</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">62</span><span class="game-title">Svět po nás</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">63</span><span class="game-title">Taco, čapka, dort, dárek, pizza</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">64</span><span class="game-title">Teserakt</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">65</span><span class="game-title">The Sims: Desková hra</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">66</span><span class="game-title">Tipni si!</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">67</span><span class="game-title">Tokaido Duo</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">68</span><span class="game-title">Tos přehnal: Česko</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">69</span><span class="game-title">Turbo</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">70</span><span class="game-title">Ubongo</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">71</span><span class="game-title">Ubongo Shimo</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">72</span><span class="game-title">UNO: Liar’s</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">73</span><span class="game-title">Víno a sýr</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">74</span><span class="game-title">Vládcové Tokia</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">75</span><span class="game-title">Výbušná koťátka</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">76</span><span class="game-title">What Do You Meme?</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">77</span><span class="game-title">WTF, kdo píše? – Bez cenzury</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">78</span><span class="game-title">Zaklínač: Cesta osudu</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">79</span><span class="game-title">Zaklínač: Starý svět</span>
+                <span class="expansion-note">Rozšíření: Stezka nestvůr, Skellige, Divoký hon, Balíček dobrodružství</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">80</span><span class="game-title">Zapadákov</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">81</span><span class="game-title">Zámky šíleného krále Ludvíka</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">82</span><span class="game-title">Západní Čechy: Otázky a odpovědi</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">83</span><span class="game-title">Zboduj město</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">84</span><span class="game-title">Zlatá řeka</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">85</span><span class="game-title">Známe se?</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">86</span><span class="game-title">Znáte český film?</span></li>
+                <li class="game-card"><span class="game-index" aria-hidden="true">87</span><span class="game-title">Znáte Evropu?</span></li>
+            </ol>
+            <p class="catalog-empty" id="game-empty" hidden>Tomuto hledání neodpovídá žádná hra.</p>
         </section>
+
+        <!-- Návrat na hlavní stránku. -->
+        <p class="back-link"><a class="button" href="index.html">Zpět na hlavní stránku</a></p>
     </main>
 
-    <!-- Patička -->
+    <!-- Vyhledávání filtruje již seřazený seznam bez změny pořadí. -->
+    <script>
+        // Převod textu na podobu vhodnou pro hledání bez rozlišování diakritiky.
+        const normalizeTitle = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('cs');
+
+        // Aktualizace viditelných her a počtu výsledků při psaní.
+        const searchInput = document.getElementById('game-search');
+        const gameCards = [...document.querySelectorAll('.game-card')];
+        const countLabel = document.getElementById('game-count');
+        const emptyMessage = document.getElementById('game-empty');
+        searchInput.addEventListener('input', () => {
+            const query = normalizeTitle(searchInput.value.trim());
+            let visibleCount = 0;
+            gameCards.forEach((card) => {
+                const matches = normalizeTitle(card.textContent).includes(query);
+                card.hidden = !matches;
+                if (matches) visibleCount += 1;
+            });
+            countLabel.textContent = query
+                ? `Zobrazeno ${visibleCount} z ${gameCards.length} her.`
+                : `V seznamu je ${gameCards.length} herních titulů.`;
+            emptyMessage.hidden = visibleCount !== 0;
+        });
+    </script>
+
+    <!-- Patička s logem a informací o autorovi webu. -->
     <footer class="site-footer">
         <img src="assets/images/kak-logo-new.png" alt="Kostky a Korbely" class="footer-logo">
         <p>Kostky a Korbely · Herní krčma pro všechny, kdo rádi hrají</p>

@@ -4,8 +4,9 @@
     <!-- Kódování, mobilní zobrazení, popis a název stránky. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aktuality a informace o webu, sociálních sítích a přípravách herní krčmy Kostky a Korbely.">
+    <meta name="description" content="Aktuality a příběhy z příprav herní krčmy Kostky a Korbely v Plzni.">
     <title>Aktuality | Kostky a Korbely</title>
+
     <!-- Společné styly a písma používaná na webu. -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +24,6 @@
 
     <!-- Navigace mezi stránkami webu a odkazy na sociální sítě. -->
     <nav class="site-nav" aria-label="Hlavní navigace">
-
         <!-- Odkazy na hlavní stránku a další podstránky. -->
         <div class="nav-links">
             <a href="index.html#o-nas">O nás</a>
@@ -32,6 +32,7 @@
             <a href="index.html#oteviraci-doba">Otevírací doba</a>
         </div>
 
+        <!-- Odkazy na sociální sítě. -->
         <div class="nav-socials" aria-label="Sociální sítě">
             <a href="https://www.instagram.com/kostkyakorbely/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
             <a href="https://www.facebook.com/people/Kostky-a-korbely/61594468944132/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8h3.4Z"></path></svg></a>
@@ -40,29 +41,63 @@
         </div>
     </nav>
 
-    <!-- Hlavní obsah podstránky s článkem a informacemi pro návštěvníky. -->
+    <!-- Přehled aktualit; nové články patří na začátek seznamu. -->
     <main class="main-content subpage-content">
-        <article class="paper-card article-card" aria-labelledby="article-title">
-            <p class="section-label">Články a aktuality</p>
-            <h1 id="article-title">Vítejte na webu Kostky a Korbely</h1>
-            <h2>Co na webu najdete</h2>
-            <p>Web slouží jako místo, kde najdete informace o naší připravované herní krčmě. Postupně sem budeme doplňovat aktuality a informace o hrách. Seznam dostupných deskových her právě připravujeme na stránce <a class="text-link" href="deskovky.html">Deskové hry</a>.</p>
-            <h2>Sledujte novinky</h2>
-            <p>Novinky z příprav a další informace najdete také na našich sociálních sítích:</p>
-            <div class="social-links article-social-links" aria-label="Sociální sítě">
-                <a href="https://www.instagram.com/kostkyakorbely/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://www.facebook.com/people/Kostky-a-korbely/61594468944132/" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href="https://www.youtube.com/@kostkyakorbely" target="_blank" rel="noopener noreferrer">YouTube</a>
-                <a href="https://www.tiktok.com/@kostkykorbely" target="_blank" rel="noopener noreferrer">TikTok</a>
-            </div>
-            <h2>Kde nás najdete</h2>
-            <p>Kostky a Korbely najdete na adrese <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Skr%C3%A9tova%2023%2C%20Plze%C5%88" target="_blank" rel="noopener noreferrer">Skrétova 23, Plzeň</a>. Odkaz otevře toto místo v Google Maps.</p>
-            <h2>Připravujeme otevření</h2>
-            <p>Hospoda zatím není otevřená. Na jejím otevření pracujeme; konkrétní termín zveřejníme, až bude potvrzený. Sledujte web a naše sociální sítě, kde budeme sdílet aktuální informace.</p>
-        </article>
+        <header class="news-page-heading">
+            <p class="section-label">Novinky z krčmy</p>
+            <h1>Aktuality</h1>
+        </header>
+
+        <section class="news-list" aria-label="Články a aktuality">
+            <!-- Úvodní příběh podniku s výběrem fotografií. -->
+            <article class="paper-card article-card news-article" aria-labelledby="story-title">
+                <p class="section-label">Náš příběh</p>
+                <h2 class="news-title" id="story-title">Naplňte korbely a rozhoďte kostky!</h2>
+                <div class="article-body">
+                    <p>Náš podnik Kostky a Korbely dokončuje vše potřebné a připravuje se na otevření veřejnost! A možná Vás zajímá, jak vůbec tento náš nápad vznikl?</p>
+                    <p>Už se Vám někdy stalo, že jste se chtěli s partou přátel sejít, zahrát si deskové hry a u toho si dát něco dobrého, jenže pak Vám došlo, že vlastně nevíte kde? V hospodě Vás všichni soudí pohledem a do kaváren se to také nehodí. Když už nějaké prostory otevřené hráčům deskových her byly, tak ale otevírací doba byla velmi omezená a nebo kapacita ihned zaplněná. To přesně se stalo nespočetněkrát i nám, a proto jsme se rozhodli to změnit!</p>
+                    <p>Naším cílem bylo vytvořit místo pro milovníky deskových her, kde se mohou sejít a poklidně si zahrát. Přinést si vlastní hru, připravené D&amp;D nebo si zapůjčit některou z her, které pro Vás máme k dispozici. Přátelské místo, kde si můžete sednout a ať už hrajete propracovanou strategii nebo jen Výbušná koťátka na odreagování, tak Vás nikdo nebude soudit. Protože hlavní je se u hraní vždy dobře bavit! A když se k tomu přidá ještě dobré čepované pivo, tak je to o to větší radost.</p>
+                    <p>Kostky a Korbely totiž nejsou jen obyčejná hospoda, ale místo, kde deskové hry spojují lidi!</p>
+                </div>
+                <!-- Fotografie článku a uvedení autora. -->
+                <div class="article-gallery" aria-label="Fotografie her a prostor Kostek a Korbelů">
+                    <img src="assets/images/kak_c_1.2.jpeg" alt="Deskové hry vystavené na stole, včetně Karaku, Gwentu a Monopoly.">
+                    <img src="assets/images/kak_c_1.3.jpeg" alt="Herní místnost s dřevěnými stoly a kamenným obloukem.">
+                    <img src="assets/images/kak_c_1.4.jpeg" alt="Herní místnost s dřevěnými stoly a židlemi u kamenné stěny.">
+                </div>
+                <p class="article-author">Autor: Bára</p>
+            </article>
+
+            <!-- Dosavadní informační článek zůstává v archivu aktualit. -->
+            <article class="paper-card article-card news-article" aria-labelledby="welcome-title">
+                <p class="section-label">Informace o webu</p>
+                <h2 class="news-title" id="welcome-title">Vítejte na webu Kostky a Korbely</h2>
+                <h3>Co na webu najdete</h3>
+                <p>Web slouží jako místo, kde najdete informace o naší připravované herní krčmě. Postupně sem budeme doplňovat aktuality a informace o hrách. Seznam dostupných deskových her právě připravujeme na stránce <a class="text-link" href="deskovky.html">Deskové hry</a>.</p>
+                <h3>Sledujte novinky</h3>
+                <p>Novinky z příprav a další informace najdete také na našich sociálních sítích:</p>
+                <div class="social-links article-social-links" aria-label="Sociální sítě">
+                    <a href="https://www.instagram.com/kostkyakorbely/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/people/Kostky-a-korbely/61594468944132/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.youtube.com/@kostkyakorbely" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a href="https://www.tiktok.com/@kostkykorbely" target="_blank" rel="noopener noreferrer">TikTok</a>
+                </div>
+                <h3>Kde nás najdete</h3>
+                <p>Kostky a Korbely najdete na adrese <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Skr%C3%A9tova%2023%2C%20Plze%C5%88" target="_blank" rel="noopener noreferrer">Skrétova 23, Plzeň</a>. Odkaz otevře toto místo v Google Maps.</p>
+                <h3>Připravujeme otevření</h3>
+                <p>Hospoda zatím není otevřená. Na jejím otevření pracujeme; konkrétní termín zveřejníme, až bude potvrzený. Sledujte web a naše sociální sítě, kde budeme sdílet aktuální informace.</p>
+            </article>
+        </section>
+
         <p class="back-link"><a class="button" href="index.html">Zpět na hlavní stránku</a></p>
     </main>
 
+    <!-- Upozornění k názvům her a ochranným známkám. -->
+    <aside class="trademark-disclaimer" aria-label="Upozornění k ochranným známkám">
+        <p>Názvy her jsou uvedeny pouze pro jejich identifikaci. Jejich uvedení neznamená spolupráci, sponzorství ani podporu ze strany příslušných vydavatelů či vlastníků ochranných známek. Kostky a Korbely jsou nezávislý podnik.</p>
+    </aside>
+
+    <!-- Patička stránky. -->
     <footer class="site-footer">
         <img src="assets/images/kak-logo-new.png" alt="Kostky a Korbely" class="footer-logo">
         <p>Kostky a Korbely · Herní krčma pro všechny, kdo rádi hrají</p>

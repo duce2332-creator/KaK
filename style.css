@@ -172,7 +172,7 @@ h2 { margin: 0 0 1rem; color: var(--crimson); font-size: clamp(1.6rem, 3.5vw, 2.
 }
 
 /* Každá herní karta dostává vlastní obrázek jako pozadí. */
-.game-item.featured-boardgames { flex-basis: 100%; min-height: 380px; border-width: 3px; background-image: url('assets/images/iterier.png'); }
+.game-item.featured-boardgames { flex-basis: 100%; min-height: 380px; border-width: 3px; background-image: url('assets/images/kak_dh.jpg'); }
 .game-item-dnd { background-image: url('assets/images/D.png'); }
 .game-item-cards { background-image: url('assets/images/mtg.jpg'); }
 .game-item-wargaming { background-image: url('assets/images/wh.jpg'); }
@@ -236,7 +236,24 @@ h2 { margin: 0 0 1rem; color: var(--crimson); font-size: clamp(1.6rem, 3.5vw, 2.
 .article-social-links { margin: 1rem 0 1.5rem; }
 .article-social-links a { color: var(--crimson); border-color: var(--crimson); }
 .article-social-links a:hover, .article-social-links a:focus-visible { color: #95182b; }
-.back-link { margin: 0 0 3rem; text-align: center; }
+.back-link { margin: 3rem 0; text-align: center; }
+
+/* Archiv aktualit s oddělenými pergamenovými kartami a úvodním nadpisem. */
+.news-page-heading { margin: 0 0 2rem; text-align: center; }
+.news-page-heading h1 { margin-bottom: 0; color: var(--paper-light); }
+.news-list { display: grid; gap: 2rem; }
+.news-article { margin-bottom: 0; }
+.news-title { text-align: center; }
+.news-article h3 { margin: 1.8rem 0 .5rem; color: var(--crimson); font: 700 1.3rem/1.25 var(--heading); }
+.news-article h3:first-of-type { margin-top: 1rem; }
+.article-body p { margin: .9rem 0; }
+
+/* Podpis autora uzavírá každý článek pod fotogalerií. */
+.article-author { margin: 1.5rem 0 0; color: var(--crimson); font: 700 1.05rem/1.3 var(--heading); text-align: right; }
+
+/* Fotogalerie článku: stejné portrétní proporce, zlaté rámečky a pružné sloupce. */
+.article-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; margin: 1.5rem 0 1.8rem; }
+.article-gallery img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border: 2px solid var(--gold); box-shadow: 0 5px 16px rgba(0,0,0,.35); }
 
 /* Patička stránky v kontrastním pergamenovém panelu. */
 .site-footer { padding: 2.5rem 1rem; color: var(--ink); text-align: center; background: var(--paper-light); border-top: 4px solid var(--crimson); }
@@ -271,3 +288,42 @@ h2 { margin: 0 0 1rem; color: var(--crimson); font-size: clamp(1.6rem, 3.5vw, 2.
 .hours-list dt, .hours-list dd { overflow-wrap: anywhere; }
 /* Při přechodu na kotvu nechá prostor nad cílovou sekcí. */
 [id] { scroll-margin-top: 5rem; }
+
+/* Na telefonu se galerie zúží na dva sloupce a třetí snímek zůstane vycentrovaný. */
+@media (max-width: 760px) {
+    .article-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
+    .article-gallery img:last-child:nth-child(3) { grid-column: 1 / -1; width: calc(50% - .325rem); justify-self: center; }
+}
+
+/* Úvod katalogu, vyhledávání a souhrnný počet her. */
+.catalog-page { max-width: 1200px; }
+.catalog-intro { text-align: center; }
+.catalog-intro h1 { margin-bottom: .8rem; }
+.catalog-intro > p:not(.section-label) { max-width: 760px; margin: .75rem auto 1.25rem; }
+.catalog-search-label { display: block; margin: 1.2rem 0 .45rem; color: var(--crimson); font: 700 1rem/1.3 var(--heading); }
+.catalog-search { width: min(100%, 560px); padding: .8rem 1rem; color: var(--ink); background: var(--paper-light); border: 2px solid var(--gold); border-radius: 4px; font: 1rem/1.4 var(--text); }
+.catalog-search:focus-visible { outline: 3px solid var(--crimson); outline-offset: 2px; }
+.catalog-count { margin: .7rem auto 0 !important; color: var(--crimson); font-size: 1rem; font-weight: 700; }
+
+/* Abecední katalog v kartách s pergamenovým podkladem a zlatým detailem. */
+.game-catalog { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.game-card { display: grid; grid-template-columns: 2rem minmax(0, 1fr); align-content: start; align-items: center; gap: .65rem; min-height: 76px; padding: 1rem; color: var(--ink); background: var(--paper); border: 1px solid #c4af83; border-left: 4px solid var(--gold); box-shadow: 3px 4px 12px rgba(0,0,0,.25); }
+.game-card[hidden] { display: none; }
+.game-index { display: grid; width: 1.85rem; height: 1.85rem; place-items: center; color: var(--paper-light); background: var(--crimson); border-radius: 50%; font: 700 .72rem/1 var(--heading); }
+.game-title { font: 700 1rem/1.35 var(--heading); overflow-wrap: anywhere; }
+.expansion-note { grid-column: 2; padding-top: .55rem; color: #5c4936; border-top: 1px dotted rgba(52,38,28,.4); font-size: .9rem; line-height: 1.4; }
+.catalog-empty { padding: 1rem; color: var(--paper-light); text-align: center; }
+
+/* Katalog přechází na méně sloupců, aby zůstaly názvy dobře čitelné. */
+@media (max-width: 900px) {
+    .game-catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+    .game-catalog { grid-template-columns: 1fr; gap: .7rem; }
+    .game-card { min-height: 0; }
+    .catalog-search { font-size: 1rem; }
+}
+
+/* Stručné upozornění pod stránkami s fotografiemi her a cizími značkami. */
+.trademark-disclaimer { width: min(1080px, calc(100% - 32px)); margin: 0 auto 2rem; padding: 1rem 1.25rem; color: var(--paper-light); border-top: 1px solid rgba(239,204,122,.55); font-size: .9rem; line-height: 1.55; text-align: center; }
+.trademark-disclaimer p { max-width: 920px; margin: 0 auto; }
