@@ -55,11 +55,16 @@
     <!-- Hlavní obsah stránky -->
     <main class="main-content">
         <article class="opening-notice" aria-labelledby="opening-notice-title">
-            <p class="notice-badge">Důležité oznámení</p>
-            <h1 id="opening-notice-title">Hospoda zatím není otevřená</h1>
-            <p>Na otevření Kostek a Korbelů usilovně pracujeme a těšíme se, až vás budeme moci přivítat.</p>
-            <p class="opening-notice-hours"><strong>Uvedené otevírací časy jsou pouze orientační</strong> 
-                a před skutečným otevřením se ještě mohou změnit. Aktuální informace zveřejníme na našich sociálních sítích.</p>
+            <p class="notice-badge">Otevíráme pro veřejnost</p>
+            <h1 id="opening-notice-title">První otevření už se blíží</h1>
+            <p class="countdown-caption" id="opening-countdown-label">Do otevření zbývá</p>
+            <div class="opening-countdown" id="opening-countdown" role="group" aria-labelledby="opening-countdown-label" aria-live="off">
+                <div class="countdown-unit"><span class="countdown-value" data-countdown="days">--</span><span class="countdown-label">Dní</span></div>
+                <div class="countdown-unit"><span class="countdown-value" data-countdown="hours">--</span><span class="countdown-label">Hodin</span></div>
+                <div class="countdown-unit"><span class="countdown-value" data-countdown="minutes">--</span><span class="countdown-label">Minut</span></div>
+                <div class="countdown-unit"><span class="countdown-value" data-countdown="seconds">--</span><span class="countdown-label">Sekund</span></div>
+            </div>
+            <p>Ve čtvrtek 29. října 2026 v 16:00 se Kostky a Korbely poprvé otevřou veřejnosti.</p>
         </article>
 
         <!-- Sekce o nás -->
@@ -188,5 +193,46 @@
         <p>Kostky a Korbely · Herní krčma pro všechny, kdo rádi hrají</p>
         <p class="creator-credit">Stránku tvoří Studio CAIK</p>
     </footer>
+
+    <!-- Odpočet do prvního otevření pro veřejnost. -->
+    <script>
+        (() => {
+            const countdown = document.getElementById('opening-countdown');
+            const title = document.getElementById('opening-notice-title');
+            const caption = document.getElementById('opening-countdown-label');
+            const targetTime = new Date('2026-10-29T16:00:00+01:00').getTime();
+            const values = {
+                days: countdown.querySelector('[data-countdown="days"]'),
+                hours: countdown.querySelector('[data-countdown="hours"]'),
+                minutes: countdown.querySelector('[data-countdown="minutes"]'),
+                seconds: countdown.querySelector('[data-countdown="seconds"]')
+            };
+            let intervalId;
+
+            const updateCountdown = () => {
+                const remainingSeconds = Math.max(0, Math.floor((targetTime - Date.now()) / 1000));
+                const days = Math.floor(remainingSeconds / 86400);
+                const hours = Math.floor((remainingSeconds % 86400) / 3600);
+                const minutes = Math.floor((remainingSeconds % 3600) / 60);
+                const seconds = remainingSeconds % 60;
+
+                values.days.textContent = String(days);
+                values.hours.textContent = String(hours);
+                values.minutes.textContent = String(minutes);
+                values.seconds.textContent = String(seconds);
+
+                if (remainingSeconds === 0) {
+                    title.textContent = 'Je to tady! Otevíráme pro veřejnost';
+                    caption.textContent = 'První otevření právě nastává';
+                    window.clearInterval(intervalId);
+                }
+            };
+
+            updateCountdown();
+            if (targetTime > Date.now()) {
+                intervalId = window.setInterval(updateCountdown, 1000);
+            }
+        })();
+    </script>
 </body>
 </html>

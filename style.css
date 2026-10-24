@@ -138,6 +138,21 @@ h2 { margin: 0 0 1rem; color: var(--crimson); font-size: clamp(1.6rem, 3.5vw, 2.
 .opening-notice-hours { padding-top: 1rem; border-top: 1px solid rgba(244,233,213,.45); }
 .opening-notice-hours strong { color: #f4d486; }
 
+/* Odpočet zvýrazňuje jednotlivé časové jednotky ve stylu zlatých detailů webu. */
+.opening-notice-intro { font-size: clamp(1.15rem, 2.5vw, 1.35rem); }
+.countdown-caption { margin-top: 1.35rem !important; margin-bottom: .65rem !important; color: #f4d486; font: 700 1.05rem/1.3 'Alegreya SC', var(--text); letter-spacing: .08em; text-transform: uppercase; }
+.opening-countdown { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; width: min(700px, 100%); margin: 0 auto 1.2rem; }
+.countdown-unit { min-width: 0; padding: 1rem .5rem; background: rgba(0,0,0,.14); border: 1px solid rgba(176,141,70,.85); border-radius: 3px; }
+.countdown-value { display: block; color: var(--paper-light); font: 700 clamp(2rem, 6vw, 3.4rem)/1.05 var(--heading); font-variant-numeric: tabular-nums; }
+.countdown-label { display: block; margin-top: .45rem; color: #f4d486; font: 700 .9rem/1.2 'Alegreya SC', var(--text); letter-spacing: .1em; text-transform: uppercase; }
+.opening-notice-hours time { font-weight: 700; }
+
+/* Na telefonu se hodnoty odpočtu přehledně skládají do dvou řad. */
+@media (max-width: 600px) {
+    .opening-countdown { grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(100%, 420px); gap: .55rem; }
+    .countdown-unit { padding: .8rem .35rem; }
+}
+
 /* Rychlé odkazy v kartách; na mobilu se skládají do jednoho sloupce. */
 .quick-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-bottom: 42px; }
 .quick-link-card { padding: 2rem; text-align: center; }
