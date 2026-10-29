@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kostky a Korbely – připravovaná herní krčma a místo pro deskové hry v Plzni.">
+    <meta name="description" content="Kostky a Korbely – oficiálně otevřená herní krčma a místo pro deskové hry v Plzni. Informace o hrách, otevírací době a novinkách.">
     <title>Kostky a Korbely | Herní krčma</title>
 
     <!-- Spojení s CSS -->
@@ -55,26 +55,21 @@
     <!-- Hlavní obsah stránky -->
     <main class="main-content">
         <article class="opening-notice" aria-labelledby="opening-notice-title">
-            <p class="notice-badge">Otevíráme pro veřejnost</p>
-            <h1 id="opening-notice-title">První otevření už se blíží</h1>
-            <p class="countdown-caption" id="opening-countdown-label">Do otevření zbývá</p>
-            <div class="opening-countdown" id="opening-countdown" role="group" aria-labelledby="opening-countdown-label" aria-live="off">
-                <div class="countdown-unit"><span class="countdown-value" data-countdown="days">--</span><span class="countdown-label">Dní</span></div>
-                <div class="countdown-unit"><span class="countdown-value" data-countdown="hours">--</span><span class="countdown-label">Hodin</span></div>
-                <div class="countdown-unit"><span class="countdown-value" data-countdown="minutes">--</span><span class="countdown-label">Minut</span></div>
-                <div class="countdown-unit"><span class="countdown-value" data-countdown="seconds">--</span><span class="countdown-label">Sekund</span></div>
-            </div>
-            <p>Ve čtvrtek 29. října 2026 v 16:00 se Kostky a Korbely poprvé otevřou veřejnosti.</p>
+            <p class="notice-badge">Oficiálně otevřeno</p>
+            <h1 id="opening-notice-title">Jsme otevřeni!</h1>
+            <p class="opening-notice-intro">Kostky a Korbely vás vítají na deskovku, dobré pití a společný večer v Plzni.</p>
+            <p><strong>Oficiální web už běží.</strong> Najdete tu základní informace o podniku, hrách a otevírací době. Na webu dál pracujeme a další obsah i funkce budeme postupně doplňovat.</p>
+            <a class="button" href="#oteviraci-doba">Zobrazit otevírací dobu</a>
         </article>
 
         <!-- Sekce o nás -->
         <section id="o-nas" class="paper-card">
             <p class="section-label">Kdo jsme</p>
             <h2>O nás</h2>
-            <p>Kostky a Korbely jsou připravovaná herní hospoda na Plzeňsku, kde se potkávají deskové hry, dobré pití, občerstvení 
+            <p>Kostky a Korbely jsou herní hospoda v Plzni, kde se potkávají deskové hry, dobré pití, občerstvení
                 a příjemná společnost. Najdete nás na adrese <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Skr%C3%A9tova%2023%2C%20Plze%C5%88" target="_blank" rel="noopener noreferrer">Skrétova 23, Plzeň</a>.
                 Chceme vytvořit pohodové zázemí pro hráče, začátečníky i všechny, kteří si chtějí u stolu užít společný čas.</p>
-            <p>Na webu postupně doplníme novinky o přípravách a informace o hrách, které si u nás budete moci zahrát.</p>
+            <p>Web je oficiálně spuštěný a funkční. Obsah i jeho možnosti budeme dál rozšiřovat a aktualizovat.</p>
         </section>
 
         <!-- Odkazy na postránky -->
@@ -92,7 +87,7 @@
             <article class="quick-link-card">
                 <p class="section-label">Novinky z krčmy</p>
                 <h2>Články a aktuality</h2>
-                <p>Přečtěte si první informace o webu, sociálních sítích a přípravách hospody.</p>
+                <p>Sledujte novinky o dění v krčmě, akcích a deskových hrách.</p>
                 <a class="button" href="aktuality.html">Číst aktuality</a>
             </article>
         </section>
@@ -173,7 +168,7 @@
         <section class="social-section" id="site">
             <p class="section-label">Zůstaňte v obraze</p>
             <h2>Sociální sítě</h2>
-            <p>Sledujte nás a nenechte si ujít novinky z příprav.</p>
+            <p>Sledujte nás a nenechte si ujít novinky z krčmy.</p>
             <div class="social-links" aria-label="Sociální sítě">
                 <a href="https://www.instagram.com/kostkyakorbely/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://www.facebook.com/people/Kostky-a-korbely/61594468944132/" target="_blank" rel="noopener noreferrer">Facebook</a>
@@ -196,45 +191,5 @@
         <p class="creator-credit">Stránku tvoří Studio CAIK</p>
     </footer>
 
-    <!-- Odpočet do prvního otevření pro veřejnost. -->
-    <script>
-        (() => {
-            const countdown = document.getElementById('opening-countdown');
-            const title = document.getElementById('opening-notice-title');
-            const caption = document.getElementById('opening-countdown-label');
-            const targetTime = new Date('2026-10-29T16:00:00+01:00').getTime();
-            const values = {
-                days: countdown.querySelector('[data-countdown="days"]'),
-                hours: countdown.querySelector('[data-countdown="hours"]'),
-                minutes: countdown.querySelector('[data-countdown="minutes"]'),
-                seconds: countdown.querySelector('[data-countdown="seconds"]')
-            };
-            let intervalId;
-
-            const updateCountdown = () => {
-                const remainingSeconds = Math.max(0, Math.floor((targetTime - Date.now()) / 1000));
-                const days = Math.floor(remainingSeconds / 86400);
-                const hours = Math.floor((remainingSeconds % 86400) / 3600);
-                const minutes = Math.floor((remainingSeconds % 3600) / 60);
-                const seconds = remainingSeconds % 60;
-
-                values.days.textContent = String(days);
-                values.hours.textContent = String(hours);
-                values.minutes.textContent = String(minutes);
-                values.seconds.textContent = String(seconds);
-
-                if (remainingSeconds === 0) {
-                    title.textContent = 'Je to tady! Otevíráme pro veřejnost';
-                    caption.textContent = 'První otevření právě nastává';
-                    window.clearInterval(intervalId);
-                }
-            };
-
-            updateCountdown();
-            if (targetTime > Date.now()) {
-                intervalId = window.setInterval(updateCountdown, 1000);
-            }
-        })();
-    </script>
 </body>
 </html>
